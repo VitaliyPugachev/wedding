@@ -1,0 +1,32 @@
+.timer {
+    margin-top: 200px;
+}
+
+.timer_wrapper {
+    font-size: var(--font-size-xs);
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 14px;
+    border: 2px solid;
+    margin: 0 10px;
+}
+
+.timer_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+}
+
+.time {
+    font-size: var(--font-size-l);
+}

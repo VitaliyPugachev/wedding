@@ -1,0 +1,10 @@
+{
+    "data": {
+        "users": [
+            {
+                "id": "123",
+                "username": "admin"
+            }
+        ]
+    }
+}

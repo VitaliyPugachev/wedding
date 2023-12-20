@@ -1,0 +1,51 @@
+.survey__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid black;
+    padding: 30px 0;
+}
+
+.question__title {
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: 50px;
+    & div {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.survey__button {
+    width: 100px;
+    padding: 10px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    margin-left: calc(50% - 50px);
+    cursor: pointer;
+}
+
+.survey__input {
+    padding: 6px;
+    background: var(--accent-color);
+    border-radius: 6px;
+}
+
+.survey__radio {
+    cursor: pointer;
+}
+
+.survey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.survey__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
