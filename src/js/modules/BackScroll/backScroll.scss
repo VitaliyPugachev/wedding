@@ -1,0 +1,15 @@
+.backBtn {
+    cursor: pointer;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    font-size: 40px;
+    transition: all .3s ease;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.hidden {
+    display: none;
+}

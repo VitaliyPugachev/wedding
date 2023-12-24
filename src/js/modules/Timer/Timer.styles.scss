@@ -1,10 +1,9 @@
 .timer {
-    margin-top: 200px;
+    margin-top: 40vh;
 }
 
 .timer_wrapper {
     font-size: var(--font-size-xs);
-    margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,11 +21,27 @@
     align-items: center;
     border-radius: 14px;
     padding: 10px;
-    width: 100px;
-    height: 100px;
-    background-color: cadetblue;
+    width: 15vw;
+    height: 15vw;
+    background-color: var(--bg-color-secondary);
 }
 
 .time {
     font-size: var(--font-size-l);
+}
+
+
+
+@media (max-height: 556px) {
+    .timer {
+        margin-top: 30vh;
+    }
+}
+
+
+@media (min-width: 556px) {
+    .timer_item {
+        width: 80px;
+        height: 80px;
+    }
 }

@@ -1,6 +1,7 @@
 import { addElement } from "../features/addElement";
 import './Survey.styles.scss';
 import {quiz} from '../../../config';
+import { openModal } from "../Modal/Modal";
 
 const questions = quiz;
 
@@ -12,12 +13,14 @@ export function Survey() {
 
     function renderAnswers(text, parent) {
         const root = document.querySelector(`.${parent}`);
-        const optionTag = text === 'answer' ? `<input class="survey_input" name="${parent}"></input>` 
-        : `<span name="${parent}">${text}</span>`
+        const optionTag = 
+            text === 'answer' 
+            ? `<input placeholder="Свой вариант" class="survey_input" name="${parent}"></input>` 
+            : `<label for="${parent}">${text}</label>`;
 
         const questionAndAnswerBlock = `
             <div>
-                <input type="radio" name="${parent}" class="survey_radio">
+                <input type="radio" name="${parent}" class="survey_radio ${parent}" value="${text}">
                 ${optionTag}
             </div>`;
 
@@ -36,6 +39,35 @@ export function Survey() {
     //Create Button 
 
     surveyRoot.innerHTML += `<button class="survey__button">Отправить</button>`
+    const sendBtn = document.querySelector('.survey__button');
+    sendBtn.setAttribute('disabled', true);
+    sendBtn.addEventListener('click', () => {
+        openModal();
+    })
 
+    checkAnswers();
+
+    document.querySelectorAll('.survey_radio')
+        .forEach(element => {element.addEventListener('click', () => {checkAnswers()})});
+        
+    function checkAnswers() {
+        const inputChecked = [];
+        for(let i = 0; i < questions.length; i++) {
+            const answers = document.querySelectorAll(`input.question${i}`);
+    
+            answers.forEach(input => {
+                inputChecked.push(input.checked);
+            })
+        }
+    
+        const result = inputChecked.filter((item) => item === true).length;
+    
+        if (result === questions.length) {
+            sendBtn.removeAttribute('disabled');
+        } else {
+            sendBtn.setAttribute('disabled', true);
+        }
+    
+    }
     
 }
