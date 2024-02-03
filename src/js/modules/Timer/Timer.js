@@ -10,23 +10,21 @@ export function Timer() {
     const timerMinutes = addElement('div', '.timer_wrapper', '', 'timer_item');
     const timerSeconds = addElement('div', '.timer_wrapper', '', 'timer_item');
 
+    const addZero = (number) => {
+        if (number < 10) {
+            return `0${number}`;
+        }
+        return number;
+    };
+
+    const updateDate = () => {
+        timerDays.innerHTML = `<span class="time">${addZero(Math.floor((date - Date.now()) / 1000 / 60 / 60 / 24))}</span> ДНЕЙ`;
+        timerHours.innerHTML = `<span class="time">${addZero(Math.floor((date - Date.now()) / 1000 / 60 / 60) % 24)}</span> ЧАСОВ`;
+        timerMinutes.innerHTML = `<span class="time">${addZero(Math.floor((date - Date.now()) / 1000 / 60) % 60)}</span> МИНУТ`;
+        timerSeconds.innerHTML = `<span class="time">${addZero(Math.floor((date - Date.now()) / 1000) % 60)}</span> СЕКУНД`;
+    };
 
     setInterval(() => {
         updateDate();
     }, 1000);
-
-    const addZero = (number) => {
-        if (number < 10) {
-            return '0' + number
-        } else {
-            return number
-        }
-    }
-
-    const updateDate = () => {
-        timerDays.innerHTML =  `<span class="time">${addZero(Math.floor((date - Date.now())/1000/60/60/24))}</span> ДНЕЙ`;
-        timerHours.innerHTML = `<span class="time">${addZero(Math.floor((date - Date.now())/1000/60/60)%24)}</span> ЧАСОВ`;
-        timerMinutes.innerHTML = `<span class="time">${addZero(Math.floor((date - Date.now())/1000/60)%60)}</span> МИНУТ`;
-        timerSeconds.innerHTML = `<span class="time">${addZero(Math.floor((date - Date.now())/1000)%60)}</span> СЕКУНД`;
-    }
 }

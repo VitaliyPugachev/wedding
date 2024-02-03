@@ -6,6 +6,7 @@ import { Survey } from './modules/Survey/Survey';
 import { Modal } from './modules/Modal/Modal';
 import { BackScroll } from './modules/BackScroll/BackScroll';
 import { MessageToGuests } from './modules/MessageToGuests/MessageToGuests';
+import { Location } from './modules/Map/Location';
 
 document.addEventListener('DOMContentLoaded', () => {
     BackScroll();
@@ -15,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
     Timer();
     Answers();
     Survey();
+    Location();
 }, false);

@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack serve --env mode=development",
-    "build:prod": "webpack --env mode=production"
+    "build:prod": "webpack --env mode=production",
+    "lint": "npx eslint ./src/**/*.js --fix"
   },
   "author": "Vitaliy",
   "license": "ISC",
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
     "html-webpack-plugin": "^5.5.3",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2",

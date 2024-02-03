@@ -1,6 +1,5 @@
 import './messageToGuests.style.scss';
 
-
 export const MessageToGuests = () => {
     const root = document.querySelector('.message');
     root.innerHTML += `
@@ -12,5 +11,5 @@ export const MessageToGuests = () => {
         <p>Мы будем очень рады, если вы разделите этот счастливый день с нами.</p>
         <p>Увидимся на нашей свадьбе!</p>
     </div>
-    `
-}
+    `;
+};

@@ -1,8 +1,8 @@
 export function throttle(callback, timeout) {
     let timer = null;
     return () => {
-        if(timer){
-            return
+        if (timer) {
+            return;
         }
 
         timer = setTimeout(() => {
@@ -10,5 +10,5 @@ export function throttle(callback, timeout) {
             clearTimeout(timer);
             timer = null;
         }, timeout);
-    }
+    };
 }

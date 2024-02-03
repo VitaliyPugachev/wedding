@@ -11,7 +11,7 @@ export const BackScroll = () => {
         const btn = document.querySelector('.backBtn');
         btn.addEventListener('click', () => {
             window.scrollTo(0, 0);
-        })
+        });
     });
 
     function scrollHandler() {
@@ -23,5 +23,4 @@ export const BackScroll = () => {
     }
 
     window.addEventListener('scroll', throttle(scrollHandler, 500));
-    
-}
+};
