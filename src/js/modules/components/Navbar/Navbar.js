@@ -13,15 +13,20 @@ export function Navbar() {
         navItem.addEventListener('click', () => {
             switch (link) {
             case 'Приглашение':
-                window.scrollTo(message.getBoundingClientRect());
+                if (message) {
+                    window.scrollTo(message.getBoundingClientRect());
+                }
                 break;
             case 'Опрос':
-                window.scrollTo(survey.getBoundingClientRect());
+                if (survey) {
+                    window.scrollTo(survey.getBoundingClientRect());
+                }
                 break;
             case 'Ответы':
-                window.scrollTo(answers.getBoundingClientRect());
+                if (answers) {
+                    window.scrollTo(answers.getBoundingClientRect());
+                }
                 break;
-
             default:
             }
         });

@@ -1,8 +1,8 @@
-import { addElement } from '../features/addElement';
+import { addElement } from '../../features/addElement';
 import './Survey.styles.scss';
-import { quiz } from '../../../config';
+import { quiz } from '../../../../config';
 import { openModal } from '../Modal/Modal';
-import { checkAnswers } from '../features/checkAnswers';
+import { checkAnswers } from '../../features/checkAnswers';
 
 const questions = quiz;
 
@@ -13,12 +13,12 @@ export function Survey() {
     function renderAnswers(text, parent) {
         const root = document.querySelector(`.${parent}`);
         const optionTag = text === 'answer'
-            ? `<input placeholder="Свой вариант" class="survey_input" name="${parent}"></input>`
-            : `<label for="${parent}">${text}</label>`;
+            ? `<input placeholder="Свой вариант" class="survey__input" name="${parent}"></input>`
+            : `<label for="${`${parent}-${text}`}" class="label">${text}</label>`;
 
         const questionAndAnswerBlock = `
             <div>
-                <input type="radio" name="${parent}" class="survey_radio ${parent}" value="${text}">
+                <input type="radio" name="${parent}" class="survey_radio ${parent}" value="${text}" id="${`${parent}-${text}`}">
                 ${optionTag}
             </div>`;
 

@@ -1,9 +1,9 @@
 import './modal.style.scss';
-import { postData } from '../features/postData';
-import { getSelectedAnswers } from '../features/getSelectedAnswers';
-import { cleanFields } from '../features/cleanFields';
-import { checkAnswers } from '../features/checkAnswers';
-import { quiz } from '../../../config';
+import { postData } from '../../features/postData';
+import { getSelectedAnswers } from '../../features/getSelectedAnswers';
+import { cleanFields } from '../../features/cleanFields';
+import { checkAnswers } from '../../features/checkAnswers';
+import { quiz } from '../../../../config';
 
 export const Modal = () => {
     document.body.innerHTML += '<div class="modal"></div>';

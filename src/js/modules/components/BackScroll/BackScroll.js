@@ -1,5 +1,5 @@
 import './backScroll.scss';
-import { throttle } from '../features/throttle';
+import { throttle } from '../../features/throttle';
 
 export const BackScroll = () => {
     document.body.innerHTML += `

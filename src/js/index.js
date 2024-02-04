@@ -1,12 +1,12 @@
 import '../styles/styles.scss';
-import { Navbar } from './modules/Navbar/Navbar';
-import { Timer } from './modules/Timer/Timer';
-import { Answers } from './modules/Answers/Answers';
-import { Survey } from './modules/Survey/Survey';
-import { Modal } from './modules/Modal/Modal';
-import { BackScroll } from './modules/BackScroll/BackScroll';
-import { MessageToGuests } from './modules/MessageToGuests/MessageToGuests';
-import { Location } from './modules/Map/Location';
+import { Navbar } from './modules/components/Navbar/Navbar';
+import { Timer } from './modules/components/Timer/Timer';
+import { Answers } from './modules/components/Answers/Answers';
+import { Survey } from './modules/components/Survey/Survey';
+import { Modal } from './modules/components/Modal/Modal';
+import { BackScroll } from './modules/components/BackScroll/BackScroll';
+import { MessageToGuests } from './modules/components/MessageToGuests/MessageToGuests';
+import { Location } from './modules/components/Location/Location';
 
 document.addEventListener('DOMContentLoaded', () => {
     BackScroll();

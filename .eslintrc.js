@@ -30,5 +30,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'consistent-return': 'off',
         'no-unused-vars': 'warn',
+        'import/no-unresolved': 'off',
+        'import/extensions': 'off',
     },
 };

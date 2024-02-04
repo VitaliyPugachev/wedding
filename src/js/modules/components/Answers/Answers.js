@@ -1,6 +1,6 @@
-import { addElement } from '../features/addElement';
+import { addElement } from '../../features/addElement';
 import './Answers.styles.scss';
-import { questionsAndAnswers } from '../../../config';
+import { questionsAndAnswers } from '../../../../config';
 
 export function Answers() {
     const questions = questionsAndAnswers;

@@ -1,5 +1,5 @@
 import './Timer.styles.scss';
-import { addElement } from '../features/addElement';
+import { addElement } from '../../features/addElement';
 
 export function Timer() {
     const timerRootElement = document.querySelector('.timer');
