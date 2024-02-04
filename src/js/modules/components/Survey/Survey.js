@@ -47,4 +47,6 @@ export function Survey() {
 
     document.querySelectorAll('.survey_radio')
         .forEach((element) => { element.addEventListener('click', () => { checkAnswers(sendBtn, questions); }); });
+
+    return document.querySelector('.survey');
 }

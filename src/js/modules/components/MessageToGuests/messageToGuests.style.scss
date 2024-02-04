@@ -1,4 +1,6 @@
 .message {
+    opacity: 0;
+    transition: opacity 1s ease;
     height: 100vh;
     display: flex;
     align-items: center;

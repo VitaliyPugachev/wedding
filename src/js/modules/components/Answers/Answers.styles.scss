@@ -1,4 +1,6 @@
 .answers {
+    opacity: 0;
+    transition: opacity 1s ease;
     min-height: 100vh;
     margin-top: 100px;
     padding: 30px;

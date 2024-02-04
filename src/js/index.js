@@ -7,14 +7,15 @@ import { Modal } from './modules/components/Modal/Modal';
 import { BackScroll } from './modules/components/BackScroll/BackScroll';
 import { MessageToGuests } from './modules/components/MessageToGuests/MessageToGuests';
 import { Location } from './modules/components/Location/Location';
+import { addObserver } from './modules/features/addObserver';
 
 document.addEventListener('DOMContentLoaded', () => {
     BackScroll();
     Modal();
     Navbar();
-    MessageToGuests();
+    addObserver(MessageToGuests());
     Timer();
-    Answers();
-    Survey();
+    addObserver(Answers());
+    addObserver(Survey());
     Location();
 }, false);

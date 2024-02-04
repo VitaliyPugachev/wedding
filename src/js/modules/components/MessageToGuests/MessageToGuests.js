@@ -12,4 +12,5 @@ export const MessageToGuests = () => {
         <p>Увидимся на нашей свадьбе!</p>
     </div>
     `;
+    return root;
 };
