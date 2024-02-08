@@ -1,11 +1,11 @@
 :root {
     --primary-color: #123123;
     --inverted-primary-color: #fff;
-    --secondary-color: #987653;
+    --secondary-color: #ffffff;
     --accent-color: #5b63ff;
 
-    --bg-color-main: #e8e8e8;
-    --bg-color-secondary: #ffedd4;
+    --bg-color-main: hsl(0, 0%, 100%);
+    --bg-color-secondary: #767676;
     --bg-color-secondary-light:rgb(166, 185, 165)5;
 
     --font-family-main: 'Courier New', Courier, monospace;
@@ -15,4 +15,14 @@
     --font-size-s: 18px;
     --font-size-m: 24px;
     --font-size-l: 30px;
+}
+
+
+@media (max-width: 450px) {
+    :root {
+        --font-size-xs: 8px;
+        --font-size-s: 14px;
+        --font-size-m: 20px;
+        --font-size-l: 26px;
+    }
 }

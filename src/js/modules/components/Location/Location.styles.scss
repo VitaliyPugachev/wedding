@@ -1,3 +1,7 @@
+.map {
+    padding: 0 10px;
+}
+
 .location {
     display: flex;
     align-items: center;
@@ -19,5 +23,6 @@
     .location {
         flex-direction: column;
         align-items: normal;
+        padding: 20px 0;
     }
 }

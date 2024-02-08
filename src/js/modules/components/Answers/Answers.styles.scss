@@ -2,17 +2,32 @@
     opacity: 0;
     transition: opacity 1s ease;
     min-height: 100vh;
-    margin-top: 100px;
     padding: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    & div {
-        margin-top: 30px;
+    &__btn {
+        padding: 10px;
+        background: inherit;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+        &:hover {
+            color: var(--accent-color);
+            fill: var(--accent-color);
+        }
     }
-    & p {
-        margin-top: 10px;
-    }
+}
+
+.answerWrapper {
+    display: none;
+}
+
+svg {
+    height: 20px;
+    width: 20px;
 }

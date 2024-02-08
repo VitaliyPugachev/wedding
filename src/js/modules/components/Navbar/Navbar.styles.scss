@@ -9,10 +9,12 @@
     align-items: center;
     padding: 10px 5px 5px 5px;
     max-width: 50%;
+    color: var(--secondary-color);
     & a {
         transition: all 0.3s ease;
         cursor: pointer;
         &:hover {
+            color: var(--accent-color);
             transform: scale(1.1);
         }
     }
