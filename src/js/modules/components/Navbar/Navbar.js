@@ -1,16 +1,17 @@
+import { Dropdown } from '../Dropdown/Dropdown';
 import './Navbar.styles.scss';
 
 export function Navbar() {
-    const navLinks = ['Приглашение', 'Опрос', 'Ответы', 'Контакты'];
+    const sections = ['Приглашение', 'Опрос', 'Ответы', 'Контакты'];
 
-    const navRootElement = document.querySelector('.navigation');
+    const root = document.querySelector('.navigation');
     const survey = document.querySelector('.survey');
     const answers = document.querySelector('.answers');
     const message = document.querySelector('.message');
 
-    const navigationItems = navLinks.map((link) => {
-        const navItem = document.createElement('a');
-        navItem.addEventListener('click', () => {
+    const navigationItems = sections.map((link) => {
+        const navLink = document.createElement('a');
+        navLink.addEventListener('click', () => {
             switch (link) {
             case 'Приглашение':
                 if (message) {
@@ -30,13 +31,17 @@ export function Navbar() {
             default:
             }
         });
-        navItem.textContent = link;
+        navLink.textContent = link;
         return (
-            navItem
+            navLink
         );
     });
 
+    if (window.navigator.userAgent.includes('iPhone') || window.navigator.userAgent.includes('Android')) {
+        return Dropdown(root, navigationItems);
+    }
+
     navigationItems.forEach((item) => {
-        navRootElement.append(item);
+        root.append(item);
     });
 }

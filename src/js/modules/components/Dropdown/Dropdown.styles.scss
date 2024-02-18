@@ -1,0 +1,31 @@
+.dropdown {
+    position: relative;
+    margin-right: auto;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: cadetblue;
+    position: absolute;
+    min-width: 200px;
+    font-size: var(--font-size-l);
+}
+
+
+.opened {
+    display: flex;
+}
+
+.dropbtn {
+    background: inherit;
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    border-radius: 14px;
+    fill: var(--secondary-color);
+    margin-left: 10px;
+}
