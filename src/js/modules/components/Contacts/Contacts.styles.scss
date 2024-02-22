@@ -1,0 +1,32 @@
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        width: 100%;
+        justify-content: center;
+    }
+    &__person {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__socials {
+        &__list {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        &__item svg{
+                min-height: 40px;
+                min-width: 40px;
+                fill: var(--primary-color);
+        }
+    }    
+}

@@ -32,6 +32,9 @@
     border-radius: 10px;
     margin-left: calc(50% - 50px);
     cursor: pointer;
+    &:disabled {
+        background-color: var(--bg-color-secondary-light);
+    }
 }
 
 .survey__input {

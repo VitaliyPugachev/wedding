@@ -1,13 +1,32 @@
 @import './vars';
 
+@font-face {
+  font-family: 'Floresdel';
+  src: url('../assets/fonts/FloresdelSolDemo.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
 h1, h2, h3 {
     font-weight: 600;
+}
+
+h1 {
+  font-size: var(--font-size-l);
+}
+
+h2 {
+  font-size: var(--font-size-m);
+}
+
+h3 {
+  font-size: var(--font-size-s);
 }
 
 body {
@@ -95,4 +114,22 @@ body {
     background-color: var(--primary-color);
     transform: translate(-50%, -50%);
     visibility: visible;
+  }
+
+  .names {
+    display: flex;
+    gap: 14px;
+    text-align: center;
+    font-family: Floresdel;
+    font-size: 60px;
+  }
+
+  @media (max-width: 450px) {
+    .names {
+      flex-direction: column;
+      gap: 0;
+      line-height: 50px;
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
   }

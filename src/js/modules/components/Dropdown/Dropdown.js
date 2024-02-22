@@ -2,8 +2,6 @@ import './Dropdown.styles.scss';
 import List from '../../../../assets/svg/list.svg';
 
 export const Dropdown = (root, links) => {
-    // const elements = links.map((link) => `<a>${link}</a>`);
-
     root.innerHTML += `
     <div class="dropdown">
         <button class="dropbtn">${List}</button>

@@ -8,6 +8,7 @@ export function Navbar() {
     const survey = document.querySelector('.survey');
     const answers = document.querySelector('.answers');
     const message = document.querySelector('.message');
+    const contacts = document.querySelector('.contacts');
 
     const navigationItems = sections.map((link) => {
         const navLink = document.createElement('a');
@@ -26,6 +27,11 @@ export function Navbar() {
             case 'Ответы':
                 if (answers) {
                     window.scrollTo(answers.getBoundingClientRect());
+                }
+                break;
+            case 'Контакты':
+                if (contacts) {
+                    window.scrollTo(contacts.getBoundingClientRect());
                 }
                 break;
             default:

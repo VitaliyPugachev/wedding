@@ -11,4 +11,11 @@
 
 .message__content {
     text-align: center;
+    padding: 0 40px;
+}
+
+@media (max-height: 650px) {
+    .message {
+        font-size: var(--font-size-s);
+    }
 }

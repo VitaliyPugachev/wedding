@@ -10,7 +10,7 @@
     padding: 20px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: cadetblue;
+    background-color: var(--bg-color-secondary);
     position: absolute;
     min-width: 200px;
     font-size: var(--font-size-l);
@@ -28,4 +28,6 @@
     border-radius: 14px;
     fill: var(--secondary-color);
     margin-left: 10px;
+    min-width: 50px;
+    min-height: 50px;
 }

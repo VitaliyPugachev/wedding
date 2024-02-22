@@ -6,6 +6,8 @@ export function Answers() {
     const questions = questionsAndAnswers;
     const root = document.querySelector('.answers');
     root.innerHTML += '<h2>Ответы на вопросы</h2>';
+    root.innerHTML += '<div class=\'answers__container\'></div>';
+    const container = document.querySelector('.answers__container');
 
     function toggleAnswer(answerSelector, arrowSelector) {
         const element = document.querySelector(answerSelector);
@@ -21,10 +23,10 @@ export function Answers() {
     }
 
     questions.forEach((question, index) => {
-        root.insertAdjacentHTML('beforeend', `    
+        container.insertAdjacentHTML('beforeend', `    
             <button class="answers__question${index} answers__btn">
                 <h3>${question[0]}</h3>
-                <div class="answers__arrow${index}">
+                <div class="answers__arrow${index} arrow-answers">
                     ${arrowIcon}
                 </div>
             </button>
