@@ -10,15 +10,15 @@ export function Survey() {
     const surveyRoot = addElement('div', '.survey', '', 'survey__wrapper');
     surveyRoot.innerHTML += '<h2 class="survey__title">Опрос</h2>';
 
-    function renderAnswers(text, parent) {
+    function renderAnswers(text, parent, multiple = false) {
         const root = document.querySelector(`.${parent}`);
         const optionTag = text === 'answer'
-            ? `<input placeholder="Свой вариант" class="survey__input" name="${parent}"></input>`
+            ? `<input placeholder="Свой вариант" class="survey__input" name="${multiple ? parent + text : parent}"></input>`
             : `<label for="${`${parent}-${text}`}" class="label">${text}</label>`;
 
         const questionAndAnswerBlock = `
             <div>
-                <input type="radio" name="${parent}" class="survey_radio ${parent}" value="${text}" id="${`${parent}-${text}`}">
+                <input type="${multiple ? 'checkbox' : 'radio'}" name="${multiple ? parent + text : parent}" class="survey_radio ${parent}" value="${text}" id="${`${parent}-${text}`}">
                 ${optionTag}
             </div>`;
 
@@ -30,7 +30,7 @@ export function Survey() {
         answersWrapper.classList.add('wrapper');
         addElement('h3', `.question${index}`, item.question, 'question__title');
         item.options.forEach((option) => {
-            renderAnswers(option, `question${index}`);
+            renderAnswers(option, `question${index}`, item.multiple);
         });
     });
 

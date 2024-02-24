@@ -17,12 +17,12 @@ export const Modal = () => {
     }
 
     root.innerHTML += `<div class="modal__sendForm">
-        <div>
+        <div class="modal__sendForm__wrapper">
             <label for="guestName" >Ваше имя: </label>
             <input id="guestName"/>
-            <button class="modal__closeBtn">&#10006;</button>
         </div>
         <button class="modal__sendBtn">Отправить</button>
+        <button class="modal__closeBtn">&#10006;</button>
     </div>`;
 
     const guestName = document.querySelector('#guestName');

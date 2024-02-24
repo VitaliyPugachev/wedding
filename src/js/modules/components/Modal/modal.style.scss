@@ -17,22 +17,31 @@
     justify-content: center;
     gap: 20px;
     background-color: var(--bg-color-main);
-    width: 320px;
-    height: 180px;
+    width: 380px;
+    height: 200px;
     border-radius: 20px;
+    padding: 6px;
+    &__wrapper {
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
 }
 
 #guestName {
     padding: 5px;
     border-radius: 4px;
     outline: none;
-    border: none;
+    border: 1px solid;
+    font-size: var(--font-size-s);
 }
 
 .modal__sendBtn {
     background-color: var(--accent-color);
     padding: 8px;
-    border: none;
+    border: 2px solid;
     border-radius: 8px;
     cursor: pointer;
     transition: all .3s ease;
