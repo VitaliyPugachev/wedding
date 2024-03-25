@@ -1,0 +1,16 @@
+.notification {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 10px;
+    border: 1px solid black;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    justify-content: center;
+    background: var(--bg-color-main);
+    transition: all .7s ease;
+    &__hide {
+        bottom: -100%;
+    }
+}

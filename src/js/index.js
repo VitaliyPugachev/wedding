@@ -9,6 +9,7 @@ import { MessageToGuests } from './modules/components/MessageToGuests/MessageToG
 import { Location } from './modules/components/Location/Location';
 import { addObserver } from './modules/features/addObserver';
 import { Contacts } from './modules/components/Contacts/Contacts';
+import { UserNotification } from './modules/components/Notification/Notification';
 
 document.addEventListener('DOMContentLoaded', () => {
     BackScroll();
@@ -20,4 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
     addObserver(Survey());
     Location();
     Contacts();
+    UserNotification('Спасибо! Ваши пожелания будут учтены!');
 }, false);

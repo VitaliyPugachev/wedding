@@ -1,7 +1,7 @@
 export async function postData(data) {
     try {
         const response = await fetch(
-            'http://localhost:5500/',
+            'http://5.35.88.152:5500/',
             {
                 method: 'POST',
                 body: JSON.stringify(data),

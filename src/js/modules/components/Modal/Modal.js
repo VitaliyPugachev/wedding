@@ -4,6 +4,7 @@ import { getSelectedAnswers } from '../../features/getSelectedAnswers';
 import { cleanFields } from '../../features/cleanFields';
 import { checkAnswers } from '../../features/checkAnswers';
 import { quiz } from '../../../../config';
+import { toggleNotification } from '../../features/toggleNotification';
 
 export const Modal = () => {
     document.body.innerHTML += '<div class="modal"></div>';
@@ -45,6 +46,8 @@ export const Modal = () => {
         } catch (error) {
             throw new Error(error);
         }
+        toggleNotification();
+        setTimeout(toggleNotification, 5000);
         document.querySelector('.modal').style.display = 'none';
         document.body.style.overflow = 'auto';
     });

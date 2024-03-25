@@ -1,10 +1,11 @@
 import './backScroll.scss';
 import { throttle } from '../../features/throttle';
+import BackArrow from '../../../../assets/svg/angles.svg';
 
 export const BackScroll = () => {
     document.body.innerHTML += `
         <div class="backBtn">
-            <img class="backBtn__img" src="../../../assets/angles.svg" alt="back to top"/>
+            ${BackArrow}
         </div>`;
 
     window.addEventListener('DOMContentLoaded', () => {
@@ -16,9 +17,9 @@ export const BackScroll = () => {
 
     function scrollHandler() {
         if (window.scrollY >= window.innerHeight) {
-            document.querySelector('.backBtn__img').style.display = 'block';
+            document.querySelector('.backBtn').style.display = 'block';
         } else {
-            document.querySelector('.backBtn__img').style.display = 'none';
+            document.querySelector('.backBtn').style.display = 'none';
         }
     }
 
